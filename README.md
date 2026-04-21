@@ -1,42 +1,59 @@
+
 # CryptoWatch
 
-Dashboard de criptomoedas em tempo real utilizando WebSocket da Binance.
+CryptoWatch is a real-time cryptocurrency dashboard that demonstrates how to build a modern, interactive web app using only HTML, CSS, and JavaScript. It connects directly to the Binance WebSocket API to display live prices, charts, and market data for major coins—no backend or database required.
 
-## Funcionalidades
+![CryptoWatch Demo Screenshot](demo-screenshot.png)
 
-- Visualização de preços em tempo real das principais criptomoedas
-- Alternância entre USD e BRL
-- Busca e filtro de moedas
-- Favoritos
-- Gainers, Losers e Heatmap 24h
+**Try it yourself:**
+Just clone the repository and open `index.html` in your browser. No build step, no dependencies!
+
+---
+
+## Features
+
+- Real-time price tracking of major cryptocurrencies
+- Switch between USD and BRL
+- Search and filter coins
+- Favorites
+- Gainers, Losers, and 24h Heatmap
 - Order Book BTC
-- Gráficos de variação e candles
-- Calculadora de conversão
-- Indicador Medo & Ganância
+- Variation and candles charts
+- Conversion calculator
+- Fear & Greed indicator
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - HTML, CSS, JavaScript
 - WebSocket (Binance API)
-- Chart.js para gráficos
+- Chart.js for charts
 
-## Como rodar localmente
+## How to Run Locally
 
-1. Clone o repositório:
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/Michelfviana/crypto_watch.git
-   ```
+ ```bash
+ git clone https://github.com/Michelfviana/crypto_watch.git
+ ```
 
-2. Acesse a pasta do projeto:
+1. Enter the project folder:
 
-   ```bash
-   cd crypto_watch
-   ```
+ ```bash
+ cd crypto_watch
+ ```
 
-3. Abra o arquivo `index.html` no navegador.
+1. Open the `index.html` file in your browser.
 
-## Observações
+## Deployment
 
-- Não utiliza backend ou banco de dados.
-- Todos os dados são obtidos em tempo real via WebSocket diretamente do navegador.
+You can publish this project on GitHub Pages, Vercel, Netlify, or any static hosting service. Simply upload the files—no server-side code needed.
+
+## Notes
+
+* No backend or database is used.
+* All data is fetched in real-time via WebSocket directly in the browser.
+
+---
+
+**Project for demonstration and educational purposes.**
+Feel free to fork, modify, and use as a starting point for your own crypto dashboards or real-time web apps!

@@ -9,7 +9,7 @@
     clip: rect(0, 0, 0, 0);
   "
 >
-  Dashboard cripto tempo real WebSocket Binance
+  Real-time Crypto Dashboard Binance WebSocket
 </h2>
 
 <div id="app">
@@ -30,7 +30,7 @@
       </svg>
       <div>
         <div class="logo-name">CryptoWatch</div>
-        <div class="logo-tag">BINANCE WEBSOCKET · TEMPO REAL</div>
+        <div class="logo-tag">BINANCE WEBSOCKET · REAL-TIME</div>
       </div>
     </div>
     <div class="topbar-r">
@@ -45,9 +45,9 @@
       </div>
       <div class="pill p-ws" id="wsPill">
         <span class="blink" id="wsDot"></span
-        ><span id="wsLabel">Conectando...</span>
+        ><span id="wsLabel">Connecting...</span>
       </div>
-      <div class="pill p-live"><span class="blink blink-g"></span>AO VIVO</div>
+      <div class="pill p-live"><span class="blink blink-g"></span>LIVE</div>
     </div>
   </div>
 
@@ -60,7 +60,7 @@
           font-family: &quot;Space Mono&quot;, monospace;
           font-size: 9px;
         "
-        >Aguardando stream...</span
+        >Waiting for stream...</span
       >
     </div>
   </div>
@@ -75,20 +75,20 @@
           <input
             type="text"
             id="searchInput"
-            placeholder="Buscar moeda..."
+            placeholder="Search coin..."
             oninput="renderTable()"
           />
         </div>
         <button class="fav-toggle" id="favBtn" onclick="toggleFavsOnly()">
-          ☆ Favoritos
+          ☆ Favorites
         </button>
       </div>
       <div class="tabs-bar">
         <div class="tabs">
-          <button class="tab active" onclick="setTab(0, this)">Todos</button>
+          <button class="tab active" onclick="setTab(0, this)">All</button>
           <button class="tab" onclick="setTab(1, this)">Gainers</button>
           <button class="tab" onclick="setTab(2, this)">Losers</button>
-          <button class="tab" onclick="setTab(3, this)">Favoritos</button>
+          <button class="tab" onclick="setTab(3, this)">Favorites</button>
         </div>
         <div class="ws-status">
           <div class="ws-dot" id="wsStatusDot"></div>
@@ -102,8 +102,8 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Moeda</th>
-              <th class="r" onclick="sortBy('price')" id="th-price">Preço ↕</th>
+              <th>Coin</th>
+              <th class="r" onclick="sortBy('price')" id="th-price">Price ↕</th>
               <th class="r" onclick="sortBy('pct')" id="th-pct">24h % ↕</th>
               <th class="r" onclick="sortBy('vol')" id="th-vol">Volume ↕</th>
               <th class="r" onclick="sortBy('hl')" id="th-hl">H / L</th>
@@ -122,7 +122,7 @@
                   font-size: 10px;
                 "
               >
-                Aguardando WebSocket...
+                Waiting for WebSocket...
               </td>
             </tr>
           </tbody>
@@ -140,13 +140,13 @@
             margin-bottom: 7px;
           "
         >
-          Variação 24h
+          24h Change
         </div>
         <div style="position: relative; height: 95px">
           <canvas
             id="barChart"
             role="img"
-            aria-label="Variação 24h todas as moedas"
+            aria-label="24h Change All Coins"
           ></canvas>
         </div>
       </div>
@@ -155,23 +155,23 @@
     <div class="side">
       <div class="sc">
         <div class="sc-hdr">
-          <span class="sc-title">Medo &amp; Ganância</span>
+          <span class="sc-title">Fear &amp; Greed</span>
         </div>
         <div class="fear-body">
           <div style="display: flex; align-items: flex-end; gap: 9px">
             <div class="fear-num" id="fearNum">—</div>
             <div>
               <div class="fear-lbl" id="fearLbl" style="color: #555">—</div>
-              <div class="fear-hint">0 medo · 100 ganância</div>
+              <div class="fear-hint">0 fear · 100 greed</div>
             </div>
           </div>
           <div class="fear-track">
             <div class="fear-fill" id="fearFill" style="width: 0%"></div>
           </div>
           <div class="fear-ticks">
-            <span class="fear-tick">Medo</span
-            ><span class="fear-tick">Neutro</span
-            ><span class="fear-tick">Ganância</span>
+            <span class="fear-tick">Fear</span
+            ><span class="fear-tick">Neutral</span
+            ><span class="fear-tick">Greed</span>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@
         <div class="ob-body" id="orderBook"></div>
       </div>
       <div class="sc">
-        <div class="sc-hdr"><span class="sc-title">Volume 24h</span></div>
+        <div class="sc-hdr"><span class="sc-title">24h Volume</span></div>
         <div style="padding: 8px 0 4px" id="volBars"></div>
       </div>
       <div class="sc">
@@ -228,7 +228,7 @@
       <div class="modal-chart-wrap">
         <div class="modal-chart-hdr">
           <span class="modal-chart-label" id="modalChartLabel"
-            >Histórico de preço</span
+            >Price History</span
           >
           <div class="tf-btns">
             <button
@@ -249,12 +249,12 @@
           <canvas
             id="modalChart"
             role="img"
-            aria-label="Gráfico histórico"
+            aria-label="Price History Chart"
           ></canvas>
         </div>
       </div>
       <div class="modal-calc">
-        <div class="calc-title">Calculadora</div>
+        <div class="calc-title">Calculator</div>
         <div class="calc-row">
           <input
             class="calc-input"

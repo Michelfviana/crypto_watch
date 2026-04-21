@@ -153,7 +153,7 @@ async function fetchBRL() {
     brlRate = parseFloat(d.price) || 5.8;
     document.getElementById("brlRate").textContent =
       "USD/BRL R$" + brlRate.toFixed(2);
-  } catch (e) {}
+  } catch (e) { }
 }
 
 async function fetchInitial() {
@@ -188,7 +188,7 @@ function connectWS() {
   if (ws) {
     try {
       ws.close();
-    } catch (e) {}
+    } catch (e) { }
   }
   ws = new WebSocket(url);
 
@@ -226,7 +226,7 @@ function connectWS() {
         if (el) el.textContent = `${tickCount} ticks`;
       }
       onPriceUpdate(sym, price, prev);
-    } catch (err) {}
+    } catch (err) { }
   };
 
   ws.onerror = () => {
@@ -789,9 +789,9 @@ async function loadKlines(interval, range, btnEl) {
       return interval === "1d"
         ? dt.toLocaleDateString("pt-BR", { month: "short", day: "numeric" })
         : dt.toLocaleTimeString("pt-BR", {
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+          hour: "2-digit",
+          minute: "2-digit",
+        });
     });
     const closes = raw.map((k) => parseFloat(k[4]));
     const isUp = closes[closes.length - 1] >= closes[0];
@@ -858,7 +858,7 @@ async function loadKlines(interval, range, btnEl) {
     });
     document.getElementById("modalChartLabel").textContent =
       `${coin.t} · ${range.toUpperCase()} · ${interval.toUpperCase()}`;
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function closeModal() {
