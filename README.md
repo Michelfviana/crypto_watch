@@ -5,6 +5,9 @@ CryptoWatch is a real-time cryptocurrency dashboard that demonstrates how to bui
 
 ![CryptoWatch Demo Screenshot](image.png)
 
+**Live Demo:**
+[https://michelfviana.github.io/crypto_watch/](https://michelfviana.github.io/crypto_watch/)
+
 **Try it yourself:**
 Just clone the repository and open `index.html` in your browser. No build step, no dependencies!
 
